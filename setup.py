@@ -14,7 +14,7 @@ README = (HERE / "README.md").read_text()
 setup(
     name="pypaytabs",
     version="1.0.0",
-    description="",
+    description="PyPaytabs is a Python library for Paytabs Payment Gateway.",
     long_description=README,
     long_description_content_type="text/markdown",
     url="https://github.com/itiblog/pypaytabs",
