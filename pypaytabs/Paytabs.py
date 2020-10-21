@@ -36,7 +36,7 @@ class Paytabs(object):
         return self._parse_response(result)
 
     def _parse_response(self, data):
-        json_dict = json.loads(data, encoding='utf-8')
+        json_dict = json.loads(data.decode('utf-8'), encoding='utf-8')
         is_error = int(json_dict['response_code']) in ERROR_CODES
         if is_error:
             raise PaytabsApiError(json_dict['response_code'], json_dict['result'])
